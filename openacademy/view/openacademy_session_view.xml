@@ -15,7 +15,7 @@
                         <button name="button_draft" type="workflow"
                                 string="Reset to draft"
                                 states="confirmed,done"/>
-                        <button name="buttom_confirm" type="workflow"
+                        <button name="button_confirm" type="workflow"
                                 string="Confirm" states="draft"
                                 class="oe_highlight"/>
                         <button name="button_done" type="workflow"
