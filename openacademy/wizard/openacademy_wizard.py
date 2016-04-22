@@ -14,7 +14,7 @@ class Wizard(models.TransientModel):
     attendee_wiz_ids = fields.Many2many('res.partner', string="Attendees")
 
     @api.multi
-    def suscribe(self):
+    def subscribe(self):
         for session_wiz_id in self.session_wiz_ids:
             session_wiz_id.attendee_ids |= self.attendee_wiz_ids
             #  openacademy_session.write( session_wiz_id, {'attendee_ids' : [0,6, [self.attendee_wiz_ids]] )
