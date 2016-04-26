@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 from datetime import timedelta
-from openerp import api, exceptions, fields, models
+from openerp import api, exceptions, fields, models, _
 
 class Session(models.Model):
     _name = 'openacademy.session'
@@ -59,8 +59,8 @@ class Session(models.Model):
         if self.seats < 0:
             return{
                       'warning': { 
-                          'title' : "Incorrect 'seats' valie",
-                          'message' : "The number of available seats may not be negative",
+                          'title' : _("Incorrect 'seats' valie"),
+                          'message' : _("The number of available seats may not be negative"),
                                  },
                   }
         if self.seats < len(self.attendee_ids):
